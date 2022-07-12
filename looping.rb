@@ -24,8 +24,6 @@ end
 
 def reverse_string(str)
   reverse_str_arr = []
-  str.each_char do |ch|
-    reverse_str_arr.unshift(ch)
-  end
+  str.each_char { |ch| reverse_str_arr.unshift(ch) }
   reverse_str_arr.join('')
 end
