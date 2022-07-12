@@ -1,5 +1,8 @@
+require 'pry'
+
 def happy_new_year
-  # your code here
+  10.downto(1) { |n| puts n }
+  puts 'Happy New Year!'
 end
 
 # No need to modify this code! Use this to implement the fizzbuzz_printer method.
@@ -16,9 +19,13 @@ def fizzbuzz(num)
 end
 
 def fizzbuzz_printer
-  # your code here
+  (1..100).each { |n| puts fizzbuzz(n) }
 end
 
 def reverse_string(str)
-  # your code here
+  reverse_str_arr = []
+  str.each_char do |ch|
+    reverse_str_arr.unshift(ch)
+  end
+  reverse_str_arr.join('')
 end
